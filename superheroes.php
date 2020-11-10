@@ -65,6 +65,8 @@ $superheroes = [
 
 ?>
 
+<?php $x = 10; ?>
+
 <?php filter_var($_GET['query'], FILTER_SANITIZE_STRING);?>
 <?php if($_GET['query']==""):?>
     <ul>
@@ -79,9 +81,12 @@ $superheroes = [
     <h3><?= $superhero['alias']; ?></h3>
     <h4><?= $superhero['name']; ?></h4>
   <p><?= $superhero['biography']; ?></p>
+
+  <?php elseif($_GET['query'] != $superhero['name'] && $_GET['query'] != "" && $_GET['query'] != $superhero['alias']):?>
+    <?php $x = $x-1; ?>
   <?php endif;?>
 <?php endforeach; ?>
 
-<?php if($_GET['query'] != $superhero['name'] && $_GET['query'] != "" && $_GET['query'] != $superhero['alias']):?>
-    <h2>"Superhero not found" </h2>
+<?php if($x == 0):?>
+    <h2>Superhero not found</h2>
   <?php endif;?>

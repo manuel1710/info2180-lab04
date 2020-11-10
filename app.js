@@ -7,6 +7,7 @@ $(document).ready(function(){
             type:'GET',
             url:'superheroes.php?query='+text1,
             success:function(data){
+                $("#result").html('');
                 $("#result").html(data);
             }
         });

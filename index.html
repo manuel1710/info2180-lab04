@@ -9,22 +9,25 @@
     <script language="JavaScript" type="text/javascript" src="app.js"></script>
 </head>
 <body>
-    <div>
-        <h1>Avengers Character Search</h1>
-    </div>
-    <div>
+    <section id="title">
+        <div class="container">
+            <h1>Avengers Character Search</h1>
+        </div>
+    </section>
+    <div class="container">
         <form action="">
-            <div>
-                <input type="text" name="heroes" id="heroes" placeholder="Search for Superhero">
+            <div class="searchbar">
+                <input type="text" name="heroes" id="heroes" placeholder="Search by Full Name or Alias">
+                <button id="search">Search</button>
             </div>
-            <button id="search">Search</button>
         </form>
        
     </div>
-    <div>
+    <div class="container">
         <h2>RESULT</h2>
     </div>
-    <div>
+    <hr>
+    <div class="container">
         <p id="result"></p>
     </div>
 </body>
